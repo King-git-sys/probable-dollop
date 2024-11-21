@@ -1,0 +1,645 @@
+/*
+! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/* General Body and Font Styles */
+body {
+  background-color: #f7fafc;
+  font-family: 'Arial', sans-serif;
+  color: #d43407;
+}
+/* Enable smooth scroll on all anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Styling for navigation links (if you need them customized) */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #3e2c1c; /* Change to a darker shade of brown on hover */
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column; /* Stack logo and firm name */
+  align-items: center; /* Center align logo and name */
+}
+
+.logo {
+  width: 100px; /* Circular logo size */
+  height: 100px;
+  border-radius: 50%; /* Make the logo circular */
+}
+
+.firm-name {
+  font-size: 1.5rem; /* Adjust font size */
+  font-weight: bold;
+  color: #f0761e; /* Brown color to match theme */
+  margin-top: 5px; /* Add space between logo and name */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: right;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff1100; /* Add a hover effect to change text color */
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #ce4e31;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ecc94b; /* Yellow color on hover */
+}
+
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #5c1c11;
+}
+#home {
+  background-color: #6b4226; /* Brown */
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+/* Home Section */
+#home .home-content {
+  display: flex;
+  align-items: center; /* Center image and text vertically */
+  gap: 2rem; /* Space between image and text */
+  padding: 3rem 1rem;
+}
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 15px; /* Space between images */
+  margin-bottom: 20px; /* Add space between images and text */
+}
+
+.home-image {
+  width: 100px; /* Adjust image width */
+  height: 100px; /* Adjust image height */
+  object-fit: cover; /* Ensure images are cropped proportionally */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  border: 2px solid #8B4513; /* Add a border matching the theme */
+}
+
+.text-content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.book-now {
+  background-color: #8B4513;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.book-now:hover {
+  background-color: #A0522D; /* Slightly lighter shade on hover */
+}
+
+#home .home-content img.section-image {
+  width: 150px;  /* Set the image size */
+  height: 150px;
+  object-fit: cover; /* Ensure the image covers the circle */
+  border-radius: 50%; /* Make the image circular */
+}
+
+#home .home-content .text-content {
+  max-width: 600px;
+}
+
+#home h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#home p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+#home .book-now-btn {
+  margin-top: 30px; /* Adjust this value as needed */
+}
+
+.book-now-btn {
+  background-color: #8B4513; /* Brown color */
+  color: #fff; /* White text */
+  padding: 10px 20px; /* Button padding */
+  font-size: 1rem; /* Font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+  transition: transform 0.2s, background-color 0.2s; /* Smooth hover animation */
+}
+
+.book-now-btn:hover {
+  background-color: #411602; /* Darker brown on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.book-now-btn:active {
+  background-color: #7b0000; /* Even darker brown on click */
+  transform: translateY(2px); /* Slight press-down effect on click */
+}
+
+
+/* About Section */
+#about .about-content {
+  display: flex;
+  align-items: center; /* Center image and text vertically */
+  gap: 2rem; /* Space between image and text */
+  padding: 3rem 1rem;
+}
+
+#about .about-content img.section-image {
+  width: 150px;  /* Set the image size */
+  height: 150px;
+  object-fit: cover; /* Ensure the image covers the circle */
+  border-radius: 50%; /* Make the image circular */
+}
+
+#about .about-content .text-content {
+  max-width: 600px;
+}
+
+#about h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#about p {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+
+/* Services Section */
+#services {
+  background-color:#6b4226;
+  padding: 4rem 1rem;
+}
+
+#services h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color:white;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+       margin: 12px 0;
+        font-size: large;
+        font-weight: 700;
+}
+}
+/* General Styles for Sections */
+section {
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column; /* Stacks content vertically by default */
+  align-items: center;
+  text-align: center;
+}
+
+.text-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text-content h1, .text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Specific Styles for About Section */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; /* Adds space between items */
+  align-items: center;
+  justify-content: center;
+}
+
+#about img {
+  width: 100%; /* Full width of its container */
+  height: auto; /* Adjusts height proportionally to maintain aspect ratio */
+  max-width: 400px; /* Optional: Limit the maximum width */
+  display: block; /* Ensures the image behaves like a block element */
+  margin: 1rem auto; /* Centers the image */
+  object-fit: cover; /* Ensures the content fits well in the rectangle */
+}
+
+
+#about .text-content {
+  flex: 1 1 300px; /* Text container adapts to available space */
+  text-align: left;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .text-content h1, .text-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 0.9rem;
+  }
+
+  #about {
+    
+    flex-direction: column; /* Stacks image and text vertically on small screens */
+  }
+  #about img {
+    width: 100%; /* Full width of its container */
+    height: auto; /* Adjusts height proportionally to maintain aspect ratio */
+    max-width: 400px; /* Optional: Limit the maximum width */
+    display: block; /* Ensures the image behaves like a block element */
+    margin: 1rem auto; /* Centers the image */
+    object-fit: cover; /* Ensures the content fits well in the rectangle */
+  }
+  
+  
+
+  #about .text-content {
+    text-align: center;
+  }
+}
+
+
+.service {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.service p {
+  font-size: 1rem;
+}
+
+/* Quiz Section */
+
+
+#quiz h2 {
+  font-size: 2rem;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quiz-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-header {
+  margin-bottom: 20px;
+}
+
+.quiz-header h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.answer {
+  display: block;
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+.answer input {
+  margin-right: 10px;
+}
+
+.answer span {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.submit-button {
+  background-color: #8B4513;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 200px;
+  margin-top: 20px;
+}
+
+.submit-button:hover {
+  background-color: #A0522D; /* Hover effect */
+}
+
+.submit-button:active {
+  background-color: #D2691E; /* Active button effect */
+}
+/* Style for the Contact Us Section */
+#contact {
+  background-color: #6f4f1f; /* Brown background color */
+  padding: 40px; /* Adds space inside the section */
+  color: white; /* White text color for contrast */
+  text-align: center; /* Centers the text */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+}
+
+/* Style for Contact Details */
+#contact .location p {
+  font-size: 1.2em; /* Increases font size for better readability */
+  margin: 10px 0; /* Adds space between paragraphs */
+  font-family: Arial, sans-serif; /* Sets a clean font */
+}
+
+/* Style for the Header */
+#contact h2 {
+  font-size: 2em; /* Increases header size */
+  margin-bottom: 20px; /* Adds space below the header */
+  color: #e26e16; /* A lighter color for the header text */
+}
+
+
+
+/* Contact Section */
+#contact {
+  padding: 4rem 1rem;
+  background-color: #6b4226;
+}
+
+#contact h2 {
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#contact .location {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+#contact .location h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(56, 8, 8);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#contact button {
+  width: 100%;
+}
+/* Styling for the new contact form section */
+#contact-form {
+  background-color: #ffffff; /* Brown background color */
+  color: rgb(58, 1, 1); /* White text color for contrast */
+  padding: 40px;
+  border-radius: 8px;
+  width: 80%; /* Makes the form width responsive */
+  margin: 0 auto; /* Centers the form */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+}
+
+#contact-form h2 {
+  font-size: 2em;
+  color: #532401; /* Lighter color for the header */
+  text-align: center;
+  margin-bottom: 20px; /* Space below the header */
+}
+
+#contact-form label {
+  display: block; /* Makes labels block-level for better alignment */
+  font-size: 1.1em;
+  margin-bottom: 8px; /* Space between label and input */
+}
+
+#contactForm input, #contactForm textarea {
+  width: 100%; /* Makes input fields span full width */
+  padding: 12px; /* Adds padding inside inputs */
+  font-size: 1em;
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 4px;
+  margin-bottom: 15px; /* Adds space between inputs */
+}
+
+#contactForm textarea {
+  height: 150px; /* Sets a fixed height for the textarea */
+}
+
+#contactForm button {
+  background-color: #f4e1d2; /* Light color button */
+  color: #6f4f1f; /* Dark brown text for the button */
+  font-size: 1.2em;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block; /* Centers the button */
+  width: 100%;
+  transition: background-color 0.3s ease; /* Smooth background color change on hover */
+}
+
+#contactForm button:hover {
+  background-color: #f1c7a0; /* Slightly darker shade on hover */
+}
+
+
+/* Styling for YouTube section */
+#video {
+  background-color: #6f4f1f; /* Brown background */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#video h2 {
+  font-size: 2em;
+  color: #f4e1d2; /* Light color for the header */
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+iframe {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+#footer {
+  background-color: #ffffff; /* Brown background */
+  color: rgb(79, 3, 3);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+#footer .footer-content p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+#footer a {
+  color: #480101; /* Light color for the links */
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #f1c7a0; /* Slightly darker on hover */
+}
